@@ -1,0 +1,23 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "Estudo sobre API  Curso DIGITAL iNNOVACIONAL ONE - Estudos sobre NODE.JS",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francisca999-tina/criando-API-EXPRESS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Francisca999-tina/criando-API-EXPRESS/issues"
+  },
+  "homepage": "https://github.com/Francisca999-tina/criando-API-EXPRESS#readme"
+}
