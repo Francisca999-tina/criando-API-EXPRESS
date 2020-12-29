@@ -6,7 +6,7 @@ const filePath = Join(__dirname, 'users.json')
 const getusers = () => {
     const data = fs.existsSync(filePath)
     ? fs.readFileSync(filePath)
-    ! []
+    : []
 
     try {
         return JSON.parse(data)
@@ -18,5 +18,11 @@ const getusers = () => {
 const saveUser = (Users) => fs.writeFileSync(filePath, JSON.stringify(users, null,'\t'))
 
 const userRoute = (app) => {
-    
+    app.route('/users/:id?')
+    .get((req, res) => {
+        const users = getusers ()
+
+        res.send({ users })
+    })
 }
+module.exports = userRoute
