@@ -1,7 +1,7 @@
 const fs = require('fs')
-const { join } = fs
+const { join } = require('path')
 
-const filePath = Join(__dirname, 'users.json')
+const filePath = join(__dirname. 'users.json')
 
 const getusers = () => {
     const data = fs.existsSync(filePath)
@@ -24,5 +24,13 @@ const userRoute = (app) => {
 
         res.send({ users })
     })
+    .post((req. res) => {
+        const users = getusers ()
+
+        users.push(req.body)
+        saveUser(users)
+
+        res.send(201).send('OK')
+    })  
 }
 module.exports = userRoute
