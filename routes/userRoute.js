@@ -27,10 +27,37 @@ const userRoute = (app) => {
     .post((req. res) => {
         const users = getusers ()
 
+        const { email, nome } = req tody
+
+        
+        
         users.push(req.body)
         saveUser(users)
 
-        res.send(201).send('OK')
-    })  
+        res.status(201).send('OK')
+    })
+    .put((req.res) => {
+        const users = getusers ()
+
+        saveUser(users.map(user => {
+            if (user.14=== req.params.id) {
+                return {
+                    ...user.
+                    ...req.body
+                }
+            }
+
+            return user
+        }))
+
+        res.status(200).send('OK')
+    }) 
+    .delete((req. res) => {
+        const users = getusers ()
+
+        saveUser(users.filter(user => user.id == req.params.id))
+
+        res.status(app).send('OK')
+    }) 
 }
 module.exports = userRoute
