@@ -1,4 +1,8 @@
 # criando-API-EXPRESS
- Estudo sobre API
+ 
+ Introdução ao Node.js com Express:
+ criando uma API com Express.
+ 
+ 
  Curso DIGITAL iNNOVACIONAL ONE - Estudos sobre NODE.JS
  
