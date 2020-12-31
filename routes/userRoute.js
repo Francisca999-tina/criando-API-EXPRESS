@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { join } = require('path')
 
-const filePath = join(__dirname. 'users.json')
+const filePath = join(__dirname.'users.json')
 
 const getusers = () => {
     const data = fs.existsSync(filePath)
@@ -20,16 +20,15 @@ const saveUser = (Users) => fs.writeFileSync(filePath, JSON.stringify(users, nul
 const userRoute = (app) => {
     app.route('/users/:id?')
     .get((req, res) => {
-        const users = getusers ()
+        const users = getusers()
 
         res.send({ users })
     })
     .post((req. res) => {
-        const users = getusers ()
+        const users = getusers()
 
-        const { email, nome } = req tody
+        const { email, nome } = req.body
 
-        
         
         users.push(req.body)
         saveUser(users)
@@ -53,7 +52,7 @@ const userRoute = (app) => {
         res.status(200).send('OK')
     }) 
     .delete((req. res) => {
-        const users = getusers ()
+        const users = getusers()
 
         saveUser(users.filter(user => user.id == req.params.id))
 
